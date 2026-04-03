@@ -110,56 +110,63 @@ footer a:hover{text-decoration:underline}
 
 /* ── RESPONSIVE ── */
 @media(max-width:768px){
-  /* ── Topbar ── */
-  .topbar{padding:0 16px;gap:10px}
-  .topbar-tag{display:none}
-  .topbar-sep{display:none}
+  /* ── Topbar：只留 Logo ── */
+  .topbar{padding:0 16px;height:48px}
+  .topbar-title{display:none!important}
+  .topbar-sep{display:none!important}
+  .topbar-tag{display:none!important}
 
-  /* ── Banner ── */
-  .cta-banner{padding:20px 16px 22px}
-  .cta-inner{flex-direction:column;align-items:flex-start;gap:14px}
-  .cta-icon-wrap{width:40px;height:40px;font-size:18px;border-radius:10px}
-  .cta-title{font-size:18px;letter-spacing:-.3px}
-  .cta-sub{font-size:12px}
+  /* ── Banner：竖排紧凑 ── */
+  .cta-banner{padding:18px 16px 20px}
+  .cta-inner{flex-direction:column;align-items:flex-start;gap:10px}
+  .cta-icon-wrap{width:36px;height:36px;font-size:16px;border-radius:9px}
   .cta-eyebrow{font-size:10px}
-  .cta-flow{display:none}
-  .cta-actions{width:100%;align-items:flex-start}
-  .cta-btn{width:100%;justify-content:center;padding:12px 16px;font-size:14px}
-  .cta-hint{display:none}
+  .cta-title{font-size:17px;letter-spacing:-.2px;margin-bottom:3px}
+  .cta-sub{font-size:12px;line-height:1.5}
+  .cta-flow{display:none!important}
+  .cta-actions{width:100%;gap:0}
+  .cta-btn{width:100%;justify-content:center;padding:11px 16px;font-size:13px;border-radius:8px;margin-top:4px}
+  .cta-btn-icon{width:18px;height:18px}
+  .cta-hint{display:none!important}
 
-  /* ── Stats bar ── */
-  .stats-bar{padding:0;overflow-x:auto;-webkit-overflow-scrolling:touch}
-  .stats-inner{height:auto;padding:12px 16px;gap:0;flex-wrap:wrap}
-  .stat-item{padding:6px 14px 6px 0;border-right:none;border-bottom:none;flex:1;min-width:80px}
-  .stat-num{font-size:16px}
-  .stat-label{font-size:11px}
+  /* ── Stats：横向滚动单行 ── */
+  .stats-bar{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .stats-inner{height:44px;padding:0 16px;flex-wrap:nowrap;gap:0;overflow:visible}
+  .stat-item{flex-shrink:0;flex:none;padding:0 16px 0 0;border-right:none;display:flex;flex-direction:row;align-items:center;gap:6px}
+  .stat-item:first-child{padding-left:0}
+  .stat-dot{flex-shrink:0}
+  .stat-num{font-size:15px;white-space:nowrap}
+  .stat-label{font-size:11px;white-space:nowrap;color:var(--t3)}
 
-  /* ── Filter bar ── */
-  .filter-bar{padding:0;top:56px}
-  .filter-inner{height:auto;padding:10px 16px;gap:6px;overflow-x:auto;-webkit-overflow-scrolling:touch;flex-wrap:nowrap}
-  .filter-lbl{display:none}
-  .filter-btn{white-space:nowrap;flex-shrink:0;padding:5px 12px;font-size:12px}
-  .filter-count{display:none}
+  /* ── Filter：横向滚动 ── */
+  .filter-bar{top:48px}
+  .filter-inner{height:44px;padding:0 16px;overflow-x:auto;-webkit-overflow-scrolling:touch;flex-wrap:nowrap;gap:6px}
+  .filter-lbl{display:none!important}
+  .filter-btn{white-space:nowrap;flex-shrink:0;padding:4px 12px;font-size:12px}
+  .filter-count{display:none!important}
 
-  /* ── Grid ── */
-  .page-body{padding:12px 12px 40px}
+  /* ── 商品卡片：2 列 ── */
+  .page-body{padding:12px 12px 48px}
   .grid{grid-template-columns:repeat(2,1fr);gap:10px}
-  .card-body{padding:10px 10px 12px}
-  .card-body h3{font-size:12px}
-  .price{font-size:13px}
+  .card-body{padding:9px 10px 11px}
+  .card-body h3{font-size:12px;line-height:1.3}
+  .price{font-size:13px;margin-bottom:5px}
+  .badge{font-size:10px;padding:2px 7px}
+  .restriction{font-size:10px;padding:5px 7px}
 
-  /* ── Modal ── */
+  /* ── 弹窗：底部 Sheet ── */
   .modal-wrapper{width:100%;max-width:100%;position:fixed;bottom:0;left:0;right:0}
-  .modal{border-radius:16px 16px 0 0}
-  .modal-close{top:-48px;right:16px;width:36px;height:36px}
-  .modal-img{max-height:220px}
-  .modal-body{padding:18px 16px 28px}
-  .modal-body h2{font-size:17px}
-  .modal-price{font-size:18px}
-  .modal-cta{width:100%;justify-content:center}
+  .modal{border-radius:18px 18px 0 0;max-height:90vh;overflow-y:auto}
+  .modal-close{top:-44px;right:16px;width:34px;height:34px;font-size:14px}
+  .modal-img{max-height:200px}
+  .modal-body{padding:16px 16px 32px}
+  .modal-body h2{font-size:16px}
+  .modal-price{font-size:18px;margin-bottom:8px}
+  .modal-note{font-size:12px;padding:10px}
+  .modal-cta{width:100%;justify-content:center;margin-top:12px}
 
   /* ── Footer ── */
-  footer{padding:16px;font-size:11px;line-height:1.8}
+  footer{padding:14px 16px;font-size:11px;line-height:2}
 }
 
 /* ── NO RESULTS ── */
